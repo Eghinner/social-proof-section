@@ -1,14 +1,34 @@
 * {
 	margin: 0;
 	padding: 0;
-	transition-duration: 0.5s;
 }
 
 body {
 	margin: 50px;
 	font-size: 15px;
 	font-family: 'Spartan', sans-serif;
-	/*font-weight: 500;*/
+}
+
+:root{
+	--magenta: hsl(300, 43%, 22%);
+	--pink: hsl(333, 80%, 67%);
+	--dark-magenta: hsl(303, 10%, 53%);
+	--light-magenta: hsl(300, 24%, 96%);
+	--white: hsl(0, 0%, 100%);
+}
+
+.top {
+	position: absolute;
+	z-index: -99999;
+	top: 0;
+	left: 0;
+}
+
+.bottom {
+	width: 100%;
+	position: absolute;
+	z-index: -99999;
+	bottom: 0;
 }
 
 .content {
@@ -20,35 +40,48 @@ body {
 
 .box1 {
 	width: 50%;
-	color: grey;
 	margin-bottom: 50px;
 }
 
-.box1 p {
-	color: hsl(300, 43%, 22%);
+.box1 .title {
+	color: var(--magenta);
 	font-size: 40px;
-	font-weight: 900;
+	font-weight: 700;
+	width: 400px;
+	padding: 10px 0;
+}
+
+.box1 .text {
+	color: var(--dark-magenta);
+	font-weight: 500;
 }
 
 .box2 {
-	width: 50%;
-	
-	color: hsl(300, 43%, 22%);
-
+	width: 400px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	margin-bottom: 50px;
-
 }
 
 .box2 div {
-	text-align: center;
-	font-weight: 600;
-	background-color: hsl(300, 24%, 96%);
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 12px;
+	background-color: var(--light-magenta);
+	color: var(--magenta);
 	padding: 9px;
 	border-radius: 4px;
-	width: 80%;
+	/*width: 400px;*/
+}
+
+.box2 div p {
+	margin-left: 20px;
+}
+
+.box2 div img {
+	margin: 0 2px;
 }
 
 
@@ -67,9 +100,8 @@ body {
 	color: hsl(0, 0%, 100%);
 	display: inline-flex;
 	direction: row;
-	gap: 10px;
+	grid-gap: 10px;
 	font-weight: 400;
-
 }
 
 .cont-box-c img {
@@ -80,9 +112,11 @@ body {
 }
 
 div [class^=box-c] {
-	background-color: hsl(300, 43%, 22%);
+	background-color: var(--magenta);
 	border-radius: 4px;
 	padding: 20px;
+	font-weight: 400;
+	font-size: 15px;
 }
 
 .perfil {
@@ -93,6 +127,21 @@ div [class^=box-c] {
 	font-weight: 700;
 	margin-top: 20px;
 }
+
+.box-c2 {
+	position: relative;
+	top: 20px;
+}
+
+.box-c3 {
+	position: relative;
+	top: 40px;
+
+}
+
+
+
+
 
 @media (max-width: 565px) {
 
